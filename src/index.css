@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F6F9FC;
+}
+
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("./assets/fonts/ProximaNova-Thin-webfont.woff") format("woff");
+  font-weight: 200
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("./assets/fonts/ProximaNova-Light-webfont.woff") format("woff");
+  font-weight: 300
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("./assets/fonts/ProximaNova-Regular-webfont.woff") format("woff");
+  font-weight: normal
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("./assets/fonts/ProximaNova-Semibold-webfont.woff") format("woff");
+  font-weight: 500
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("./assets/fonts/ProximaNova-Bold-webfont.woff") format("woff");
+  font-weight: 700
+}
+
+html,body {
+  font-family: 'ProximaNova', 'Helvetica', Arial, sans-serif;
+  font-weight: normal
+}
