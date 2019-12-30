@@ -1,8 +1,8 @@
 import './styles.scss';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Svg from '../../common/svg';
-import { convertDate } from '../../../helpers/index.js';
+import Svg from '../../../common/svg';
+import { convertDate } from '../../../../helpers/index.js';
 
 const propTypes = {
     date: PropTypes.string.isRequired,

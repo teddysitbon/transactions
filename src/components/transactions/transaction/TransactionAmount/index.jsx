@@ -1,5 +1,5 @@
 import './styles.scss';
-import { LOCALE } from '../../../constants/locale.js';
+import { LOCALE } from '../../../../constants/locale.js';
 import PropTypes from 'prop-types';
 import React from 'react';
 

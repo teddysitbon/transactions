@@ -1,5 +1,6 @@
 import './styles.scss';
 import React, { Component } from 'react';
+import Emoji from '../../../common/emoji';
 import PropTypes from 'prop-types';
 
 
@@ -20,7 +21,15 @@ class UserName extends Component {
 
     renderName () {
         if (this.props.businessName !== null) {
-            return this.props.businessName;
+            return (
+                <>
+                    <Emoji
+                        label="business"
+                        symbol="🏦"
+                    />
+                    {this.props.businessName}
+                </>
+            );
         }
         return `${this.props.firstname} ${this.props.lastname}`;
     }

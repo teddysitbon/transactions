@@ -1,6 +1,6 @@
 import './styles.scss';
 import React from 'react';
-import Svg from '../../common/svg';
+import Svg from '../../../common/svg';
 
 function TransactionPro () {
     return (

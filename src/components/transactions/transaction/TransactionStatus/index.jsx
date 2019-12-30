@@ -1,8 +1,8 @@
 import './styles.scss';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Svg from '../../common/svg';
-import { TRANSACTION_STATUS } from '../../../constants/status.js';
+import Svg from '../../../common/svg';
+import { TRANSACTION_STATUS } from '../../../../constants/status.js';
 
 
 class TransactionStatus extends Component {
