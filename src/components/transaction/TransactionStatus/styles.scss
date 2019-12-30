@@ -1,0 +1,28 @@
+@import '../../../global.scss';
+
+.transaction-status{
+    width: 40px;
+    padding: 10px;
+    flex-direction: row;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+
+    .logo-success path{
+        fill: $green;
+    }
+    .logo-cancel {
+        width: 25px;
+        path {
+            fill: $red;
+        }
+    }
+    .logo-pending {
+        width: 25px;
+        path{
+            fill: $orange;
+        }
+    }
+}

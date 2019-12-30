@@ -1,0 +1,77 @@
+@import '../../global.scss';
+
+.transaction{
+    border-radius: 5px;
+    margin-bottom: 40px;
+    -webkit-transform: translateZ(0) translateZ(0);
+    transform: translateZ(0) translateZ(0);
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    box-shadow: 4px 4px 10px 2px rgba(141,151,158,.2);
+    background: $white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    cursor: pointer;
+
+    &:hover{
+        -webkit-transform: translate3d(0,-3px,0) translateZ(0);
+        transform: translate3d(0,-3px,0) translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    &-description{
+        flex: 1 1 0%;
+        padding: 10px 20px;
+
+        .identifiant{
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            padding: 10px 0;
+
+            &-number{
+                flex-direction: row;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                flex: 1 1 0;
+
+                .identifiant-title{
+                    font-weight: 600;
+                    padding-right: 5px;
+                }
+            }
+            &-date{
+                flex-direction: row;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                flex: 1 1 0;
+                svg{
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        .users{
+            padding: 10px 0;
+            .user{
+                &-payer,
+                &-receiver{
+                    font-weight: 600;
+                }
+                &-to{
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .message{
+            padding: 10px 0;
+        }
+    }
+
+}

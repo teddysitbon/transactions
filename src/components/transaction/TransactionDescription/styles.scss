@@ -1,0 +1,53 @@
+@import '../../../global.scss';
+
+.transaction-description{
+    flex: 1 1 0%;
+    padding: 10px 20px;
+
+    .identifiant{
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        &-number{
+            flex-direction: row;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            flex: 1 1 0;
+
+            .identifiant-title{
+                font-weight: 600;
+                padding-right: 5px;
+            }
+        }
+        &-date{
+            flex-direction: row;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            flex: 1 1 0;
+            svg{
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .users{
+        padding: 10px 0;
+        .user{
+            &-payer,
+            &-receiver{
+                font-weight: 600;
+            }
+            &-to{
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .message{
+        padding: 10px 0;
+    }
+}
