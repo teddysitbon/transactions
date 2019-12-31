@@ -1,21 +1,5 @@
 @import '../../global.scss';
 
-.content{
-    max-width: 980px;
-    width: 100%;
-    margin: 0 auto;
-    background: $background-grey;
-    border-radius: 5px;
-    padding: 80px 60px;
-    margin-bottom: 50px;
-
-    &-title{
-        margin-top: 0px;
-        margin-bottom: 40px;
-        font-size: 36px;
-    }
-}
-
 .emoji{
     padding-right: 10px;
 }

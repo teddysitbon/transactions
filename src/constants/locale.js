@@ -10,5 +10,8 @@ export const LOCALE = {
             ID: 'ID',
             TO: 'à',
         }
+    },
+    USERS: {
+        TITLE: 'All users',
     }
 };

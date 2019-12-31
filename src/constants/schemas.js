@@ -1,4 +1,5 @@
 export const initialState = {
     isLoadingTransactions: true,
-    transactions: []
+    transactions: [],
+    users: []
 };

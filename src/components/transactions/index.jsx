@@ -5,6 +5,7 @@ import { LOCALE } from '../../constants/locale.js';
 import PropTypes from 'prop-types';
 import Transaction from './transaction';
 import { connect } from 'react-redux';
+import { loadTransactions } from '../../actions';
 
 const {
     TITLE
@@ -13,12 +14,23 @@ const {
 class Transactions extends Component {
     static propTypes = {
         isLoadingTransactions: PropTypes.bool.isRequired,
+        loadTransactions: PropTypes.func.isRequired,
+
         transactions: PropTypes.array.isRequired,
     };
 
+    componentDidMount () {
+        this.props.loadTransactions();
+    }
+
     renderTransactions () {
         if (this.props.isLoadingTransactions) {
-            this.renderLoader();
+            return (
+                <div className="transactions--loading">
+                    <div className="transaction--loading" />
+                    <div className="transaction--loading" />
+                </div>
+            );
         }
         const { transactions } = this.props;
         const renderTransactions = [];
@@ -44,15 +56,6 @@ class Transactions extends Component {
         );
     }
 
-    renderLoader () {
-        return (
-            <div className="transactions--loading">
-                <div className="transaction--loading" />
-                <div className="transaction--loading" />
-            </div>
-        );
-    }
-
     render () {
         return (
             <section className="content">
@@ -74,8 +77,11 @@ const mapStateToProps = (state) => ({
     isLoadingTransactions: state.isLoadingTransactions,
     transactions: state.transactions,
 });
+const mapDispatchToProps = {
+    loadTransactions
+};
+
 export default connect(
     mapStateToProps,
-    null
+    mapDispatchToProps
 )(Transactions);
-

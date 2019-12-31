@@ -14,3 +14,12 @@ export function loadTransactions () {
         });
     };
 }
+export function loadUsers () {
+    return async (dispatch) => {
+        const newData = await lydiaProvider.loadUsers();
+        dispatch({
+            type: types.LYDIA_LOAD_USERS,
+            payload: newData
+        });
+    };
+}

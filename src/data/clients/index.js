@@ -7,3 +7,10 @@ export function loadTransactions () {
         url: 'https://my-json-server.typicode.com/Mteuahasan/json-server-test/transactions',
     });
 }
+export function loadUsers () {
+    return axios({
+        method: 'GET',
+        responseType: 'json',
+        url: 'https://my-json-server.typicode.com/Mteuahasan/json-server-test/users',
+    });
+}

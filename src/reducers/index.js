@@ -14,6 +14,12 @@ const rootReducer = ( state = {}, action) => {
                 transactions: action.payload.data
             };
         }
+        case lydiaType.LYDIA_LOAD_USERS: {
+            return {
+                ...state,
+                users: action.payload.data
+            };
+        }
         default:
             return state;
     }
