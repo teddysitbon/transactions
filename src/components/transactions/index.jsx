@@ -1,9 +1,14 @@
 import './styles.scss';
 import React, { Component } from 'react';
 import Emoji from '../common/emoji';
+import { LOCALE } from '../../constants/locale.js';
 import PropTypes from 'prop-types';
 import Transaction from './transaction';
 import { connect } from 'react-redux';
+
+const {
+    TITLE
+} = LOCALE.TRANSACTIONS;
 
 class Transactions extends Component {
     static propTypes = {
@@ -13,12 +18,7 @@ class Transactions extends Component {
 
     renderTransactions () {
         if (this.props.isLoadingTransactions) {
-            return (
-                <div className="transactions--loading">
-                    <div className="transaction--loading" />
-                    <div className="transaction--loading" />
-                </div>
-            );
+            this.renderLoader();
         }
         const { transactions } = this.props;
         const renderTransactions = [];
@@ -44,15 +44,25 @@ class Transactions extends Component {
         );
     }
 
+    renderLoader () {
+        return (
+            <div className="transactions--loading">
+                <div className="transaction--loading" />
+                <div className="transaction--loading" />
+            </div>
+        );
+    }
+
     render () {
         return (
             <section className="content">
                 <h2 className="content-title">
-                    All Transactions
                     <Emoji
+                        className="emoji"
                         label="transaction"
                         symbol="💸"
                     />
+                    {TITLE}
                 </h2>
                 { this.renderTransactions() }
             </section>

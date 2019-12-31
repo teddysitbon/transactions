@@ -24,6 +24,7 @@ class UserName extends Component {
             return (
                 <>
                     <Emoji
+                        className="emoji"
                         label="business"
                         symbol="🏦"
                     />

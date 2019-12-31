@@ -4,6 +4,7 @@ export const LOCALE = {
         FEAT: 'x',
     },
     TRANSACTIONS: {
+        TITLE: 'Transaction history',
         CURRENCY: ' €',
         DESCRIPTION: {
             ID: 'ID',
