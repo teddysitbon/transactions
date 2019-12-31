@@ -1,9 +1,9 @@
 import './styles.scss';
 import { LOCALE } from '../../constants/locale.js';
 import { LYDIA_URL } from '../../constants/url.js';
+import Menu from './Menu.jsx';
 import React from 'react';
 import Svg from '../common/svg';
-import classNames from 'classnames';
 
 const {
     BASELINE,
@@ -13,26 +13,26 @@ const {
 function Header () {
     return (
         <header className="header">
-            <a
-                className={classNames(
-                    'site-title',
-                    'global-container'
-                )}
-                href={LYDIA_URL}
-            >
-                <Svg
-                    height="35"
-                    type="logo"
-                    viewBox="0 0 35 35"
-                    width="35"
-                />
-                <span className="header-featuring">
-                    {FEAT}
-                </span>
-                <span className="header-partner">
-                    {BASELINE}
-                </span>
-            </a>
+            <div className="global-container">
+                <a
+                    className="header-logo"
+                    href={LYDIA_URL}
+                >
+                    <Svg
+                        height="35"
+                        type="logo"
+                        viewBox="0 0 35 35"
+                        width="35"
+                    />
+                    <span className="header-featuring">
+                        {FEAT}
+                    </span>
+                    <span className="header-partner">
+                        {BASELINE}
+                    </span>
+                </a>
+                <Menu />
+            </div>
         </header>
     );
 }

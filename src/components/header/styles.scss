@@ -4,6 +4,19 @@
     padding: 40px 0;
     background: $blue;
     
+    &-logo {
+        flex-direction: row;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+    }
+
     svg {
         border: 2px solid $white;
         border-radius: 50%;
@@ -30,5 +43,28 @@
         width: 100%;
         z-index: -1;
         background: $blue;
+    }
+
+    .menu {
+        flex-direction: row;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        flex: 1 1 0%;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        &-item{
+            a {
+                text-decoration: none;
+            }
+        }
+        &-emoji{
+            padding: 0 10px;
+            font-size: 40px;
+        }
     }
 }

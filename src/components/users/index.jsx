@@ -26,7 +26,7 @@ class Users extends Component {
                 <h2 className="content-title">
                     <Emoji
                         className="emoji"
-                        label="transaction"
+                        label="users"
                         symbol="👨‍👩‍👧‍👦 "
                     />
                     {TITLE}

@@ -1,13 +1,5 @@
 @import './global.scss';
 
-.site {
-    &-title {
-        cursor: pointer;
-        text-decoration: none;
-        color: $white;
-    }
-}
-
 .global-container {
     max-width: 1100px;
     width: 100%;
