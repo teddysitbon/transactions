@@ -1,10 +1,10 @@
 import './styles.scss';
 import React from 'react';
-import Svg from '../../../common/svg';
+import Svg from '../svg';
 
-function TransactionPro () {
+function ItemPro () {
     return (
-        <span className="transaction-pro">
+        <span className="item-pro">
             <Svg
                 className="logo-pro"
                 height="35"
@@ -16,4 +16,4 @@ function TransactionPro () {
     );
 }
 
-export default TransactionPro;
+export default ItemPro;

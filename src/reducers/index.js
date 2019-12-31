@@ -2,10 +2,16 @@ import * as lydiaType from '../constants/types.js';
 
 const rootReducer = ( state = {}, action) => {
     switch (action.type) {
-        case lydiaType.LYDIA_LOADING_STATE: {
+        case lydiaType.LYDIA_LOADING_TRANSACTIONS_STATE: {
             return {
                 ...state,
-                isLoadingTransactions: false
+                isLoadingTransactions: action.payload
+            };
+        }
+        case lydiaType.LYDIA_LOADING_USERS_STATE: {
+            return {
+                ...state,
+                isLoadingUsers: action.payload
             };
         }
         case lydiaType.LYDIA_LOAD_TRANSACTIONS: {

@@ -1,9 +1,9 @@
 import './styles.scss';
-import { LOCALE } from '../../constants/locale.js';
-import { LYDIA_URL } from '../../constants/url.js';
+import { LOCALE } from '../../../constants/locale.js';
+import { LYDIA_URL } from '../../../constants/url.js';
 import Menu from './Menu.jsx';
 import React from 'react';
-import Svg from '../common/svg';
+import Svg from '../svg';
 
 const {
     BASELINE,

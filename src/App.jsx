@@ -1,6 +1,10 @@
 import './App.scss';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import Header from './components/header';
+import {
+    TRANSACTIONS_URL,
+    USERS_URL
+} from './constants/url.js';
+import Header from './components/common/header';
 import React from 'react';
 import Transactions from './components/transactions';
 import Users from './components/users';
@@ -14,12 +18,12 @@ function App () {
                 <Route
                     component={Transactions}
                     exact
-                    path="/"
+                    path={TRANSACTIONS_URL}
                 />
                 <Route
                     component={Users}
                     exact
-                    path="/users"
+                    path={USERS_URL}
                 />
             </div>
         </Router>

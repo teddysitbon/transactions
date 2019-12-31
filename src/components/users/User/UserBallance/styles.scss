@@ -1,0 +1,20 @@
+@import '../../../../global.scss';
+
+.user-ballance{
+    min-width: 80px;
+    font-weight: 600;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .ballance-positive{
+        color: $green;
+        &:before{
+            content: "+ ";
+        }
+    }
+    .ballance-negative{
+        color: $red;
+    }
+}

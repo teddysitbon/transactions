@@ -3,7 +3,7 @@ import { LOCALE } from '../../../../constants/locale.js';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TransactionDate from './TransactionDate.jsx';
-import UserName from './UserName.jsx';
+import UserName from '../../../common/userName';
 
 const {
     ID,

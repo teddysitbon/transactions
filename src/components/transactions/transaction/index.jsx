@@ -1,9 +1,9 @@
 import './styles.scss';
+import ItemPro from '../../common/itemPro';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TransactionAmount from './TransactionAmount';
 import TransactionDescription from './TransactionDescription';
-import TransactionPro from './TransactionPro';
 import TransactionStatus from './TransactionStatus';
 
 const propTypes = {
@@ -35,7 +35,7 @@ function Transaction (props) {
             />
             {
                 props.isPro &&
-                <TransactionPro />
+                <ItemPro />
             }
         </div>
     );

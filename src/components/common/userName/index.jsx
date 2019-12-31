@@ -1,6 +1,6 @@
 import './styles.scss';
 import React, { Component } from 'react';
-import Emoji from '../../../common/emoji';
+import Emoji from '../emoji';
 import PropTypes from 'prop-types';
 
 

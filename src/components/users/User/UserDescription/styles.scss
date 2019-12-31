@@ -1,0 +1,19 @@
+.user-description{
+    .user-emoji{
+        font-size: 15px;
+        padding-right: 10px;
+    }
+    .user-fraudster .user-emoji{
+        padding-right: 0px;
+    }
+    .user-name{
+        padding: 10px 0;
+        .user-fullname{
+            font-weight: 600;
+        }
+    }
+    .identifiant-title{
+        font-weight: 600;
+        padding-right: 5px;
+    }
+}

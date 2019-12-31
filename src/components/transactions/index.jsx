@@ -1,7 +1,7 @@
 import './styles.scss';
 import React, { Component } from 'react';
-import Emoji from '../common/emoji';
 import { LOCALE } from '../../constants/locale.js';
+import Page from '../common/page/index';
 import PropTypes from 'prop-types';
 import Transaction from './transaction';
 import { connect } from 'react-redux';
@@ -15,7 +15,6 @@ class Transactions extends Component {
     static propTypes = {
         isLoadingTransactions: PropTypes.bool.isRequired,
         loadTransactions: PropTypes.func.isRequired,
-
         transactions: PropTypes.array.isRequired,
     };
 
@@ -23,19 +22,19 @@ class Transactions extends Component {
         this.props.loadTransactions();
     }
 
-    renderTransactions () {
+    renderTransactions = () => {
         if (this.props.isLoadingTransactions) {
             return (
-                <div className="transactions--loading">
-                    <div className="transaction--loading" />
-                    <div className="transaction--loading" />
+                <div className="items--loading">
+                    <div className="item--loading" />
+                    <div className="item--loading" />
                 </div>
             );
         }
         const { transactions } = this.props;
-        const renderTransactions = [];
+        const transactionsArray = [];
         transactions.map((transaction) => {
-            renderTransactions.push((
+            transactionsArray.push((
                 <Transaction
                     amount={transaction.amount}
                     date={transaction.date}
@@ -51,24 +50,19 @@ class Transactions extends Component {
         });
         return (
             <div className="transactions">
-                {renderTransactions}
+                {transactionsArray}
             </div>
         );
     }
 
     render () {
         return (
-            <section className="content">
-                <h2 className="content-title">
-                    <Emoji
-                        className="emoji"
-                        label="transaction"
-                        symbol="💸"
-                    />
-                    {TITLE}
-                </h2>
-                { this.renderTransactions() }
-            </section>
+            <Page
+                emojiLabel="transaction"
+                emojiSymbol="💸"
+                renderContent={this.renderTransactions}
+                title={TITLE}
+            />
         );
     }
 }
