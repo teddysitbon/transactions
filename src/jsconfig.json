@@ -4,8 +4,8 @@
     "target": "es6",
     "jsx": "react",
     "paths": {
-      "actions": ["./src/actions/*", "./src/actions/index.js"],
-      "common": ["./src/components/common/**/*", "./src/components/common/**/*/index.jsx"],
+      "actions": ["./actions/*", "./actions/index.js"],
+      "common": ["./components/common/**/*", "./components/common/**/*/index.jsx"],
       "components": ["./components/**/*", "./components/**/*/index.jsx"],
       "constants": ["./constants", "./constants/index.js"],
       "data": ["./data/*", "./data/index.js"],
